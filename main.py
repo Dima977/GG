@@ -7,6 +7,8 @@ from item2 import Ui_item2
 import sqlite3
 import sys
 
+goods = [0, 0, 0, 0, 0, 0]
+
 with sqlite3.connect("PR.db") as db:
     cur = db.cursor()
     db_CPU = cur.execute("""select count(CPU_ID) from CPU""").fetchall()
@@ -78,6 +80,7 @@ class MainWindow(QMainWindow):
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add(id_widget, image, name))
+            print()
 
     def add_widget_GPU(self):
         pass
