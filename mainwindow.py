@@ -47,11 +47,11 @@ class Ui_MainWindow(object):
         self.btn_RAM.setStyleSheet("background-color: #E42A2A;\n"
 "border-radius: 10px;")
         self.btn_RAM.setObjectName("btn_RAM")
-        self.btn_matherboard = QtWidgets.QPushButton(self.widget)
-        self.btn_matherboard.setGeometry(QtCore.QRect(30, 220, 240, 65))
-        self.btn_matherboard.setStyleSheet("background-color: #E42A2A;\n"
+        self.btn_motherboard = QtWidgets.QPushButton(self.widget)
+        self.btn_motherboard.setGeometry(QtCore.QRect(30, 220, 240, 65))
+        self.btn_motherboard.setStyleSheet("background-color: #E42A2A;\n"
 "border-radius: 10px;")
-        self.btn_matherboard.setObjectName("btn_matherboard")
+        self.btn_motherboard.setObjectName("btn_motherboard")
         self.btn_storage_device = QtWidgets.QPushButton(self.widget)
         self.btn_storage_device.setGeometry(QtCore.QRect(30, 380, 240, 65))
         self.btn_storage_device.setStyleSheet("background-color: #E42A2A;\n"
@@ -154,8 +154,15 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.scrollArea, 1, 0, 1, 1)
         self.btn_exit = QtWidgets.QPushButton(self.frame)
         self.btn_exit.setGeometry(QtCore.QRect(20, 10, 301, 141))
-        self.btn_exit.setStyleSheet("background-color:  #D9D9D9;\n"
-"border-radius: 10px;")
+        self.btn_exit.setStyleSheet("QPushButton{\n"
+"background-color:  #D9D9D9;\n"
+"border-radius: 10px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                       stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"    text: Выход; \n"
+" }")
         self.btn_exit.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("image/izobrazhenie-PhotoRoom_png-PhotoRoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -181,7 +188,7 @@ class Ui_MainWindow(object):
         self.btn_CPU.setText(_translate("MainWindow", "Процессор"))
         self.btn_GPU.setText(_translate("MainWindow", "Видеокарта"))
         self.btn_RAM.setText(_translate("MainWindow", "Оперативная память"))
-        self.btn_matherboard.setText(_translate("MainWindow", "Материнская плата"))
+        self.btn_motherboard.setText(_translate("MainWindow", "Материнская плата"))
         self.btn_storage_device.setText(_translate("MainWindow", "Накопители"))
         self.btn_power_unit.setText(_translate("MainWindow", "Блок питания"))
         self.btn_cooling.setText(_translate("MainWindow", "Охлаждение"))

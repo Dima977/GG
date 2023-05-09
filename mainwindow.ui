@@ -97,7 +97,7 @@ border-radius: 10px;</string>
          <string>Оперативная память</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_matherboard">
+       <widget class="QPushButton" name="btn_motherboard">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -423,8 +423,15 @@ border-radius: 10px;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color:  #D9D9D9;
-border-radius: 10px;</string>
+        <string notr="true">QPushButton{
+background-color:  #D9D9D9;
+border-radius: 10px;
+}
+QPushButton:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+	text: Выход; 
+ }</string>
        </property>
        <property name="text">
         <string/>

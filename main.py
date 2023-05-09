@@ -21,6 +21,9 @@ with sqlite3.connect("PR.db") as db:
     name_GPU = cur.execute("""select name from GPU""").fetchall()
 
     db_motherboard = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
+    image_motherboard = cur.execute("""select image from motherboard""").fetchall()
+    name_motherboard = cur.execute("""select name from motherboard""").fetchall()
+
     db_RAM = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
     db_storage = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
     db_power_unit = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
@@ -74,6 +77,9 @@ class MainWindow(QMainWindow):
         self.ui.btn_GPU.clicked.connect(lambda: self.clear_area())
         self.ui.btn_GPU.clicked.connect(lambda: self.add_widget_GPU())
 
+        self.ui.btn_motherboard.clicked.connect(lambda: self.clear_area())
+        self.ui.btn_motherboard.clicked.connect(lambda: self.add_widget_motherboard())
+
     def add_CPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_CPU.addWidget(item)
@@ -86,6 +92,27 @@ class MainWindow(QMainWindow):
         self.ui.layout_GPU.addWidget(item)
         item.delete.connect(self.delete_widget)
         goods[1] = id_widget
+
+    def add_motherboard(self, id_widget: int, image: str, name: str):
+        item = ItemWidget2(id_widget, image=image, name=name)
+        self.ui.layout_2.addWidget(item)
+        item.delete.connect(self.delete_widget)
+        goods[2] = id_widget
+
+    def add_RAM(self):
+        pass
+
+    def add_storage_device(self):
+        pass
+
+    def add_power_unit(self):
+        pass
+
+    def add_cooling(self):
+        pass
+
+    def add_case(self):
+        pass
 
     @pyqtSlot()
     def add_widget_CPU(self):
@@ -113,7 +140,16 @@ class MainWindow(QMainWindow):
                 lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_GPU(id_widget, image, name))
 
     def add_widget_motherboard(self):
-        pass
+        self.counter_id = 0
+        while self.counter_id != db_motherboard[0][0]:
+            self.counter_id += 1
+            image = (image_motherboard[self.counter_id - 1][0])
+            name = (name_motherboard[self.counter_id - 1][0])
+            widget = ItemWidget(self.counter_id, image=image, name=name)
+            self.ui.layout.addWidget(widget)
+            #widget.ui.btn_add.clicked.connect(lambda: self.clear_GPU())
+            widget.ui.btn_add.clicked.connect(
+                lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_motherboard(id_widget, image, name))
 
     def add_widget_RAM(self):
         pass
