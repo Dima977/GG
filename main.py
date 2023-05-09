@@ -11,10 +11,15 @@ goods = [0, 0, 0, 0, 0, 0]
 
 with sqlite3.connect("PR.db") as db:
     cur = db.cursor()
+
     db_CPU = cur.execute("""select count(CPU_ID) from CPU""").fetchall()
     image_CPU = cur.execute("""select image from CPU""").fetchall()
     name_CPU = cur.execute("""select name from CPU""").fetchall()
+
     db_GPU = cur.execute("""select count(GPU_ID) from GPU""").fetchall()
+    image_GPU = cur.execute("""select image from GPU""").fetchall()
+    name_GPU = cur.execute("""select name from GPU""").fetchall()
+
     db_motherboard = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
     db_RAM = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
     db_storage = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
@@ -65,10 +70,22 @@ class MainWindow(QMainWindow):
         self.ui.btn_CPU.clicked.connect(lambda: self.clear_area())
         self.ui.btn_CPU.clicked.connect(lambda: self.add_widget_CPU())
 
-    def add(self, id_widget: int, image: str, name: str):
+        self.ui.btn_GPU.clicked.connect(lambda: self.clear_area())
+        self.ui.btn_GPU.clicked.connect(lambda: self.add_widget_GPU())
+
+    def add_CPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_2.addWidget(item)
         item.delete.connect(self.delete_widget)
+        goods[0] = id_widget
+        print(goods)
+
+    def add_GPU(self, id_widget: int, image: str, name: str):
+        item = ItemWidget2(id_widget, image=image, name=name)
+        self.ui.layout_2.addWidget(item)
+        item.delete.connect(self.delete_widget)
+        goods[1] = id_widget
+        print(goods)
 
     @pyqtSlot()
     def add_widget_CPU(self):
@@ -79,11 +96,18 @@ class MainWindow(QMainWindow):
             name = (name_CPU[self.counter_id - 1][0])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
-            widget.ui.btn_add.clicked.connect(lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add(id_widget, image, name))
-            print()
+            widget.ui.btn_add.clicked.connect(lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_CPU(id_widget, image, name))
 
     def add_widget_GPU(self):
-        pass
+        self.counter_id = 0
+        while self.counter_id != db_GPU[0][0]:
+            self.counter_id += 1
+            image = (image_GPU[self.counter_id - 1][0])
+            name = (name_GPU[self.counter_id - 1][0])
+            widget = ItemWidget(self.counter_id, image=image, name=name)
+            self.ui.layout.addWidget(widget)
+            widget.ui.btn_add.clicked.connect(
+                lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_GPU(id_widget, image, name))
 
     def add_widget_motherboard(self):
         pass
@@ -110,8 +134,7 @@ class MainWindow(QMainWindow):
             item.widget().deleteLater()
 
     @pyqtSlot(int)
-    def delete_widget(self, wid: int):
-        print(wid)
+    def delete_widget(self):
         widget = self.sender()
         self.ui.layout_2.removeWidget(widget)
         widget.deleteLater()
