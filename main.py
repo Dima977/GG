@@ -65,6 +65,7 @@ class MainWindow(QMainWindow):
         self.showFullScreen()
         self.ui.btn_exit.clicked.connect(exit)
         self.btn()
+        self.ui.pushButton.clicked.connect(self.clear_all)
 
     def btn(self):
         self.ui.btn_CPU.clicked.connect(lambda: self.clear_area())
@@ -75,17 +76,16 @@ class MainWindow(QMainWindow):
 
     def add_CPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
-        self.ui.layout_2.addWidget(item)
+        self.ui.layout_CPU.addWidget(item)
         item.delete.connect(self.delete_widget)
         goods[0] = id_widget
         print(goods)
 
     def add_GPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
-        self.ui.layout_2.addWidget(item)
+        self.ui.layout_GPU.addWidget(item)
         item.delete.connect(self.delete_widget)
         goods[1] = id_widget
-        print(goods)
 
     @pyqtSlot()
     def add_widget_CPU(self):
@@ -96,7 +96,9 @@ class MainWindow(QMainWindow):
             name = (name_CPU[self.counter_id - 1][0])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
-            widget.ui.btn_add.clicked.connect(lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_CPU(id_widget, image, name))
+            widget.ui.btn_add.clicked.connect(lambda: self.clear_CPU())
+            widget.ui.btn_add.clicked.connect(
+                lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_CPU(id_widget, image, name))
 
     def add_widget_GPU(self):
         self.counter_id = 0
@@ -106,6 +108,7 @@ class MainWindow(QMainWindow):
             name = (name_GPU[self.counter_id - 1][0])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
+            widget.ui.btn_add.clicked.connect(lambda: self.clear_GPU())
             widget.ui.btn_add.clicked.connect(
                 lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_GPU(id_widget, image, name))
 
@@ -127,11 +130,25 @@ class MainWindow(QMainWindow):
     def add_widget_case(self):
         pass
 
+    def clear_CPU(self):
+        while self.ui.layout_CPU.count() > 0:
+            item = self.ui.layout_CPU.takeAt(0)
+            item.widget().deleteLater()
+
+    def clear_GPU(self):
+        while self.ui.layout_GPU.count() > 0:
+            item = self.ui.layout_GPU.takeAt(0)
+            item.widget().deleteLater()
+
     @pyqtSlot()
     def clear_area(self):
         while self.ui.layout.count() > 0:
             item = self.ui.layout.takeAt(0)
             item.widget().deleteLater()
+
+    def clear_all(self):
+        self.clear_CPU()
+        self.clear_GPU()
 
     @pyqtSlot(int)
     def delete_widget(self):
