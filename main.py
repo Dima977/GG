@@ -67,7 +67,6 @@ class MainWindow(QMainWindow):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_2.addWidget(item)
         item.delete.connect(self.delete_widget)
-        print(id_widget)
 
     @pyqtSlot()
     def add_widget_CPU(self):
