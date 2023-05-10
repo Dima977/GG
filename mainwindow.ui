@@ -516,6 +516,23 @@ border-radius: 10px;</string>
          <string>Конфигурация:</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_clear">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>250</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #E42A2A;
+border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="widget_3" native="true">
        <property name="geometry">

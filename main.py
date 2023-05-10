@@ -7,7 +7,7 @@ from item2 import Ui_item2
 import sqlite3
 import sys
 
-goods = [0, 0, 0, 0, 0, 0]
+configuration = [0, 0, 0, 0, 0, 0, 0, 0]
 
 with sqlite3.connect("PR.db") as db:
     cur = db.cursor()
@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
         self.showFullScreen()
         self.ui.btn_exit.clicked.connect(exit)
         self.btn()
-        self.ui.pushButton.clicked.connect(self.clear_all)
+        self.ui.btn_clear.clicked.connect(self.clear_all)
 
     def btn(self):
         self.ui.btn_CPU.clicked.connect(lambda: self.clear_area())
@@ -114,50 +114,49 @@ class MainWindow(QMainWindow):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_CPU.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[0] = id_widget
-        print(goods)
+        configuration[0] = id_widget
 
     def add_GPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_GPU.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[1] = id_widget
 
     def add_motherboard(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_motherboard.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[2] = id_widget
+        configuration[2] = id_widget
 
     def add_RAM(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_RAM.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[3] = id_widget
 
     def add_storage_device(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_storage_device.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[4] = id_widget
 
     def add_power_unit(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_power_unit.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[5] = id_widget
 
     def add_cooling(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_cooling.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[6] = id_widget
 
     def add_case(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_case.addWidget(item)
         item.delete.connect(self.delete_widget)
-        goods[1] = id_widget
+        configuration[7] = id_widget
 
     @pyqtSlot()
     def widget_CPU(self):
@@ -304,6 +303,12 @@ class MainWindow(QMainWindow):
     def clear_all(self):
         self.clear_CPU()
         self.clear_GPU()
+        self.clear_motherboard()
+        self.clear_RAM()
+        self.clear_storage_device()
+        self.clear_power_unit()
+        self.clear_cooling()
+        self.clear_case()
 
     @pyqtSlot(int)
     def delete_widget(self):
