@@ -4,6 +4,7 @@ from PyQt5.QtGui import QPixmap
 from mainwindow import Ui_MainWindow
 from item import Ui_item
 from item2 import Ui_item2
+from configuration import Ui_configuration
 import sqlite3
 import sys
 
@@ -12,38 +13,28 @@ configuration = [0, 0, 0, 0, 0, 0, 0, 0]
 with sqlite3.connect("PR.db") as db:
     cur = db.cursor()
 
-    db_CPU = cur.execute("""select count(CPU_ID) from CPU""").fetchall()
-    image_CPU = cur.execute("""select image from CPU""").fetchall()
-    name_CPU = cur.execute("""select name from CPU""").fetchall()
+    db_CPU = cur.execute("""select CPU_ID, image,name from CPU""").fetchall()
 
-    db_GPU = cur.execute("""select count(GPU_ID) from GPU""").fetchall()
-    image_GPU = cur.execute("""select image from GPU""").fetchall()
-    name_GPU = cur.execute("""select name from GPU""").fetchall()
+    db_GPU = cur.execute("""select GPU_ID, image, name from GPU """).fetchall()
 
-    db_motherboard = cur.execute("""select count(motherboard_ID) from motherboard""").fetchall()
-    image_motherboard = cur.execute("""select image from motherboard""").fetchall()
-    name_motherboard = cur.execute("""select name from motherboard""").fetchall()
+    db_motherboard = cur.execute("""select motherboard_ID, image, name from motherboard""").fetchall()
 
-    db_RAM = cur.execute("""select count(RAM_ID) from RAM""").fetchall()
-    image_RAM = cur.execute("""select image from RAM""").fetchall()
-    name_RAM = cur.execute("""select name from RAM""").fetchall()
+    db_RAM = cur.execute("""select RAM_ID, image, name from RAM""").fetchall()
 
-    db_storage = cur.execute("""select count(storage_ID) from storage_device""").fetchall()
-    image_storage = cur.execute("""select image from storage_device""").fetchall()
-    name_storage = cur.execute("""select name from storage_device""").fetchall()
+    db_power_unit = cur.execute("""select power_ID, image, name from power_unit""").fetchall()
 
-    db_power_unit = cur.execute("""select count(power_ID) from power_unit""").fetchall()
-    image_power_unit = cur.execute("""select image from power_unit""").fetchall()
-    name_power_unit = cur.execute("""select name from power_unit""").fetchall()
+    db_cooling = cur.execute("""select cooling_ID, image, name from cooling""").fetchall()
 
-    db_cooling = cur.execute("""select count(cooling_ID) from cooling""").fetchall()
-    image_cooling = cur.execute("""select image from cooling""").fetchall()
-    name_cooling = cur.execute("""select name from cooling""").fetchall()
+    db_case = cur.execute("""select case_ID, image, name from `case`""").fetchall()
 
-    db_case = cur.execute("""select count(case_ID) from `case`""").fetchall()
-    image_case = cur.execute("""select image from `case`""").fetchall()
-    name_case = cur.execute("""select name from `case`""").fetchall()
+    db_storage = cur.execute("""select storage_ID, image, name from storage_device""").fetchall()
 
+class ConfigWidget(QWidget):
+
+    def __init__(self, parent=None):
+        super(ConfigWidget, self).__init__(parent)
+        self.ui = Ui_configuration()
+        self.ui.setupUi(self)
 
 class ItemWidget(QWidget):
 
@@ -84,6 +75,11 @@ class MainWindow(QMainWindow):
         self.ui.btn_exit.clicked.connect(exit)
         self.btn()
         self.ui.btn_clear.clicked.connect(self.clear_all)
+        self.ui.pushButton.clicked.connect(self.con_show)
+
+    def con_show(self):
+        self.w = ConfigWidget()
+        self.w.show()
 
     def btn(self):
         self.ui.btn_CPU.clicked.connect(lambda: self.clear_area())
@@ -98,9 +94,6 @@ class MainWindow(QMainWindow):
         self.ui.btn_RAM.clicked.connect(lambda: self.clear_area())
         self.ui.btn_RAM.clicked.connect(lambda: self.widget_RAM())
 
-        self.ui.btn_storage_device.clicked.connect(lambda: self.clear_area())
-        self.ui.btn_storage_device.clicked.connect(lambda: self.widget_storage_device())
-
         self.ui.btn_power_unit.clicked.connect(lambda: self.clear_area())
         self.ui.btn_power_unit.clicked.connect(lambda: self.widget_power_unit())
 
@@ -109,6 +102,9 @@ class MainWindow(QMainWindow):
 
         self.ui.btn_case.clicked.connect(lambda: self.clear_area())
         self.ui.btn_case.clicked.connect(lambda: self.widget_case())
+
+        self.ui.btn_storage_device.clicked.connect(lambda: self.clear_area())
+        self.ui.btn_storage_device.clicked.connect(lambda: self.widget_storage_device())
 
     def add_CPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
@@ -134,12 +130,6 @@ class MainWindow(QMainWindow):
         item.delete.connect(self.delete_widget)
         configuration[3] = id_widget
 
-    def add_storage_device(self, id_widget: int, image: str, name: str):
-        item = ItemWidget2(id_widget, image=image, name=name)
-        self.ui.layout_storage_device.addWidget(item)
-        item.delete.connect(self.delete_widget)
-        configuration[4] = id_widget
-
     def add_power_unit(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
         self.ui.layout_power_unit.addWidget(item)
@@ -158,13 +148,19 @@ class MainWindow(QMainWindow):
         item.delete.connect(self.delete_widget)
         configuration[7] = id_widget
 
+    def add_storage_device(self, id_widget: int, image: str, name: str):
+        item = ItemWidget2(id_widget, image=image, name=name)
+        self.ui.layout_storage_device.addWidget(item)
+        item.delete.connect(self.delete_widget)
+        configuration[4] = id_widget
+
     @pyqtSlot()
     def widget_CPU(self):
         self.counter_id = 0
-        while self.counter_id != db_CPU[0][0]:
+        for i in db_CPU:
             self.counter_id += 1
-            image = (image_CPU[self.counter_id - 1][0])
-            name = (name_CPU[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_CPU())
@@ -173,10 +169,10 @@ class MainWindow(QMainWindow):
 
     def widget_GPU(self):
         self.counter_id = 0
-        while self.counter_id != db_GPU[0][0]:
+        for i in db_GPU:
             self.counter_id += 1
-            image = (image_GPU[self.counter_id - 1][0])
-            name = (name_GPU[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_GPU())
@@ -185,10 +181,10 @@ class MainWindow(QMainWindow):
 
     def widget_motherboard(self):
         self.counter_id = 0
-        while self.counter_id != db_motherboard[0][0]:
+        for i in db_motherboard:
             self.counter_id += 1
-            image = (image_motherboard[self.counter_id - 1][0])
-            name = (name_motherboard[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_motherboard())
@@ -197,33 +193,22 @@ class MainWindow(QMainWindow):
 
     def widget_RAM(self):
         self.counter_id = 0
-        while self.counter_id != db_RAM[0][0]:
+        for i in db_RAM:
             self.counter_id += 1
-            image = (image_RAM[self.counter_id - 1][0])
-            name = (name_RAM[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_RAM())
             widget.ui.btn_add.clicked.connect(
                 lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_RAM(id_widget, image,name))
-    def widget_storage_device(self):
-        self.counter_id = 0
-        while self.counter_id != db_storage[0][0]:
-            self.counter_id += 1
-            image = (image_storage[self.counter_id - 1][0])
-            name = (name_storage[self.counter_id - 1][0])
-            widget = ItemWidget(self.counter_id, image=image, name=name)
-            self.ui.layout.addWidget(widget)
-            widget.ui.btn_add.clicked.connect(lambda: self.clear_storage_device())
-            widget.ui.btn_add.clicked.connect(
-                lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_storage_device(id_widget, image,name))
 
     def widget_power_unit(self):
         self.counter_id = 0
-        while self.counter_id != db_power_unit[0][0]:
+        for i in db_power_unit:
             self.counter_id += 1
-            image = (image_power_unit[self.counter_id - 1][0])
-            name = (name_power_unit[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_power_unit())
@@ -232,10 +217,10 @@ class MainWindow(QMainWindow):
 
     def widget_cooling(self):
         self.counter_id = 0
-        while self.counter_id != db_cooling[0][0]:
+        for i in db_cooling:
             self.counter_id += 1
-            image = (image_cooling[self.counter_id - 1][0])
-            name = (name_cooling[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_cooling())
@@ -244,15 +229,27 @@ class MainWindow(QMainWindow):
 
     def widget_case(self):
         self.counter_id = 0
-        while self.counter_id != db_case[0][0]:
+        for i in db_case:
             self.counter_id += 1
-            image = (image_case[self.counter_id - 1][0])
-            name = (name_case[self.counter_id - 1][0])
+            image = (i[1])
+            name = (i[2])
             widget = ItemWidget(self.counter_id, image=image, name=name)
             self.ui.layout.addWidget(widget)
             widget.ui.btn_add.clicked.connect(lambda: self.clear_case())
             widget.ui.btn_add.clicked.connect(
                 lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_case(id_widget, image,name))
+
+    def widget_storage_device(self):
+        self.counter_id = 0
+        for i in db_storage:
+            self.counter_id += 1
+            image = (i[1])
+            name = (i[2])
+            widget = ItemWidget(self.counter_id, image=image, name=name)
+            self.ui.layout.addWidget(widget)
+            widget.ui.btn_add.clicked.connect(lambda: self.clear_storage_device())
+            widget.ui.btn_add.clicked.connect(
+                lambda checked, id_widget=widget.id_widget, image=image, name=name: self.add_storage_device(id_widget, image,name))
 
     def clear_CPU(self):
         while self.ui.layout_CPU.count() > 0:
@@ -274,11 +271,6 @@ class MainWindow(QMainWindow):
             item = self.ui.layout_RAM.takeAt(0)
             item.widget().deleteLater()
 
-    def clear_storage_device(self):
-        while self.ui.layout_storage_device.count() > 0:
-            item = self.ui.layout_storage_device.takeAt(0)
-            item.widget().deleteLater()
-
     def clear_power_unit(self):
         while self.ui.layout_power_unit.count() > 0:
             item = self.ui.layout_power_unit.takeAt(0)
@@ -294,12 +286,16 @@ class MainWindow(QMainWindow):
             item = self.ui.layout_case.takeAt(0)
             item.widget().deleteLater()
 
+    def clear_storage_device(self):
+        while self.ui.layout_storage_device.count() > 0:
+            item = self.ui.layout_storage_device.takeAt(0)
+            item.widget().deleteLater()
+
     @pyqtSlot()
     def clear_area(self):
         while self.ui.layout.count() > 0:
             item = self.ui.layout.takeAt(0)
             item.widget().deleteLater()
-
     def clear_all(self):
         self.clear_CPU()
         self.clear_GPU()

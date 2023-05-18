@@ -114,28 +114,11 @@ border-radius: 10px;</string>
          <string>Материнская плата</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_storage_device">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>380</y>
-          <width>240</width>
-          <height>65</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
-        </property>
-        <property name="text">
-         <string>Накопители</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="btn_power_unit">
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>460</y>
+          <y>380</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -152,7 +135,7 @@ border-radius: 10px;</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>540</y>
+          <y>460</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -169,7 +152,7 @@ border-radius: 10px;</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>620</y>
+          <y>540</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -193,6 +176,23 @@ border-radius: 10px;</string>
         </property>
         <property name="text">
          <string>Помощь!</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_storage_device">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>620</y>
+          <width>240</width>
+          <height>65</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #E42A2A;
+border-radius: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Накопители</string>
         </property>
        </widget>
       </widget>
