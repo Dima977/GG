@@ -48,6 +48,7 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.btn_RAM.setObjectName("btn_RAM")
         self.btn_motherboard = QtWidgets.QPushButton(self.widget)
+        self.btn_motherboard.setEnabled(False)
         self.btn_motherboard.setGeometry(QtCore.QRect(30, 220, 240, 65))
         self.btn_motherboard.setStyleSheet("background-color: #E42A2A;\n"
 "border-radius: 10px;")

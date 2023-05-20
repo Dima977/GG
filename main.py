@@ -15,9 +15,9 @@ with sqlite3.connect("PR.db") as db:
 
     db_CPU = cur.execute("""select CPU_ID, image,name from CPU""").fetchall()
 
-    db_GPU = cur.execute("""select GPU_ID, image, name from GPU """).fetchall()
+    db_GPU = cur.execute("""select GPU_ID, image, name from GPU""").fetchall()
 
-    db_motherboard = cur.execute("""select motherboard_ID, image, name from motherboard""").fetchall()
+
 
     db_RAM = cur.execute("""select RAM_ID, image, name from RAM""").fetchall()
 
@@ -111,6 +111,20 @@ class MainWindow(QMainWindow):
         self.ui.layout_CPU.addWidget(item)
         item.delete.connect(self.delete_widget)
         configuration[0] = id_widget
+        if self.ui.layout_CPU.count() > 0:
+            self.ui.btn_motherboard.setEnabled(True)
+        else:
+            self.ui.btn_motherboard.setEnabled(False)
+        with sqlite3.connect("PR.db") as db:
+
+            cur = db.cursor()
+
+        self.db_motherboard = cur.execute(f"""SELECT motherboard_ID, image, name
+        FROM motherboard
+        WHERE socket = (
+          SELECT socket
+          FROM CPU
+          WHERE CPU_ID = {configuration[0]})""").fetchall()
 
     def add_GPU(self, id_widget: int, image: str, name: str):
         item = ItemWidget2(id_widget, image=image, name=name)
@@ -181,7 +195,7 @@ class MainWindow(QMainWindow):
 
     def widget_motherboard(self):
         self.counter_id = 0
-        for i in db_motherboard:
+        for i in self.db_motherboard:
             self.counter_id += 1
             image = (i[1])
             name = (i[2])
