@@ -5,6 +5,7 @@ from mainwindow import Ui_MainWindow
 from item import Ui_item
 from item2 import Ui_item2
 from configuration import Ui_configuration
+from customWidget import Ui_CustomWidget
 import sqlite3
 import sys
 
@@ -74,13 +75,14 @@ class MainWindow(QMainWindow):
         self.ui.btn_exit.clicked.connect(exit)
         self.btn()
         self.ui.btn_clear.clicked.connect(self.clear_all)
-        self.ui.pushButton.clicked.connect(self.con_show)
 
     def con_show(self):
         self.w = ConfigWidget()
         self.w.show()
 
     def btn(self):
+        self.ui.pushButton.clicked.connect(self.con_show)
+
         self.ui.btn_CPU.clicked.connect(lambda: self.clear_area())
         self.ui.btn_CPU.clicked.connect(lambda: self.widget_CPU())
 
