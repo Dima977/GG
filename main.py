@@ -17,8 +17,6 @@ with sqlite3.connect("PR.db") as db:
 
     db_GPU = cur.execute("""select GPU_ID, image, name from GPU""").fetchall()
 
-
-
     db_RAM = cur.execute("""select RAM_ID, image, name from RAM""").fetchall()
 
     db_power_unit = cur.execute("""select power_ID, image, name from power_unit""").fetchall()
@@ -68,6 +66,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self):
         super(MainWindow, self).__init__()
+        self.db_motherboard = None
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.counter_id: int = 0
@@ -116,9 +115,7 @@ class MainWindow(QMainWindow):
         else:
             self.ui.btn_motherboard.setEnabled(False)
         with sqlite3.connect("PR.db") as db:
-
             cur = db.cursor()
-
         self.db_motherboard = cur.execute(f"""SELECT motherboard_ID, image, name
         FROM motherboard
         WHERE socket = (

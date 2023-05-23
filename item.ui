@@ -37,7 +37,9 @@ border-radius: 10px;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: white;</string>
+      <string notr="true">border: white;
+background-color: white;
+</string>
      </property>
      <property name="title">
       <string>GroupBox</string>

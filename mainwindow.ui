@@ -56,8 +56,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Процессор</string>
@@ -73,8 +92,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Видеокарта</string>
@@ -90,8 +128,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Оперативная память</string>
@@ -110,8 +167,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Материнская плата</string>
@@ -127,8 +203,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Блок питания</string>
@@ -144,8 +239,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Охлаждение</string>
@@ -161,8 +275,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Корпус</string>
@@ -177,8 +310,29 @@ border-radius: 10px;</string>
           <height>28</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
+        </property>
         <property name="text">
-         <string>Помощь!</string>
+         <string>Справка</string>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_storage_device">
@@ -191,8 +345,27 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Накопители</string>
@@ -202,9 +375,9 @@ border-radius: 10px;</string>
       <widget class="QWidget" name="widget_2" native="true">
        <property name="geometry">
         <rect>
-         <x>1490</x>
+         <x>1439</x>
          <y>10</y>
-         <width>400</width>
+         <width>451</width>
          <height>970</height>
         </rect>
        </property>
@@ -217,7 +390,7 @@ border-radius: 10px;</string>
          <rect>
           <x>20</x>
           <y>290</y>
-          <width>361</width>
+          <width>411</width>
           <height>651</height>
          </rect>
         </property>
@@ -229,7 +402,7 @@ border-radius: 10px;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>361</width>
+           <width>411</width>
            <height>651</height>
           </rect>
          </property>
@@ -262,7 +435,7 @@ border-radius: 10px;</string>
             <item>
              <layout class="QVBoxLayout" name="layout_CPU">
               <property name="leftMargin">
-               <number>30</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
                <number>30</number>
@@ -486,21 +659,40 @@ border-radius: 10px;</string>
          </rect>
         </property>
         <property name="text">
-         <string>Цена:</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Цена:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>180</y>
+          <x>90</x>
+          <y>170</y>
           <width>305</width>
-          <height>50</height>
+          <height>55</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Сформировать</string>
@@ -510,27 +702,45 @@ border-radius: 10px;</string>
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>256</y>
+          <y>240</y>
           <width>161</width>
-          <height>20</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
-         <string>Конфигурация:</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ffffff;&quot;&gt;Конфигурация:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
        <widget class="QPushButton" name="btn_clear">
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>250</y>
+          <x>340</x>
+          <y>240</y>
           <width>93</width>
           <height>28</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: #E42A2A;
-border-radius: 10px;</string>
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
         </property>
         <property name="text">
          <string>Очистить</string>
@@ -540,7 +750,7 @@ border-radius: 10px;</string>
       <widget class="QWidget" name="widget_3" native="true">
        <property name="geometry">
         <rect>
-         <x>430</x>
+         <x>400</x>
          <y>10</y>
          <width>1000</width>
          <height>250</height>
@@ -554,7 +764,7 @@ border-radius: 10px;</string>
       <widget class="QFrame" name="frame_2">
        <property name="geometry">
         <rect>
-         <x>429</x>
+         <x>400</x>
          <y>289</y>
          <width>1000</width>
          <height>700</height>

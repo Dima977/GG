@@ -32,7 +32,9 @@ class Ui_item(object):
         font.setBold(False)
         font.setWeight(50)
         self.widget.setFont(font)
-        self.widget.setStyleSheet("border: white;")
+        self.widget.setStyleSheet("border: white;\n"
+"background-color: white;\n"
+"")
         self.widget.setObjectName("widget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.widget)
         self.gridLayout_2.setObjectName("gridLayout_2")
@@ -111,13 +113,3 @@ class Ui_item(object):
         self.label_2.setText(_translate("item", "TextLabel"))
         self.btn_add.setText(_translate("item", "Добавить"))
         self.label.setText(_translate("item", "TextLabel"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    item = QtWidgets.QWidget()
-    ui = Ui_item()
-    ui.setupUi(item)
-    item.show()
-    sys.exit(app.exec_())

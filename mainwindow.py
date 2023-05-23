@@ -34,59 +34,230 @@ class Ui_MainWindow(object):
         self.widget.setObjectName("widget")
         self.btn_CPU = QtWidgets.QPushButton(self.widget)
         self.btn_CPU.setGeometry(QtCore.QRect(30, 60, 240, 65))
-        self.btn_CPU.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_CPU.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_CPU.setObjectName("btn_CPU")
         self.btn_GPU = QtWidgets.QPushButton(self.widget)
         self.btn_GPU.setGeometry(QtCore.QRect(30, 140, 240, 65))
-        self.btn_GPU.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_GPU.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_GPU.setObjectName("btn_GPU")
         self.btn_RAM = QtWidgets.QPushButton(self.widget)
         self.btn_RAM.setGeometry(QtCore.QRect(30, 300, 240, 65))
-        self.btn_RAM.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_RAM.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_RAM.setObjectName("btn_RAM")
         self.btn_motherboard = QtWidgets.QPushButton(self.widget)
         self.btn_motherboard.setEnabled(False)
         self.btn_motherboard.setGeometry(QtCore.QRect(30, 220, 240, 65))
-        self.btn_motherboard.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_motherboard.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_motherboard.setObjectName("btn_motherboard")
         self.btn_power_unit = QtWidgets.QPushButton(self.widget)
         self.btn_power_unit.setGeometry(QtCore.QRect(30, 380, 240, 65))
-        self.btn_power_unit.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_power_unit.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_power_unit.setObjectName("btn_power_unit")
         self.btn_cooling = QtWidgets.QPushButton(self.widget)
         self.btn_cooling.setGeometry(QtCore.QRect(30, 460, 240, 65))
-        self.btn_cooling.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_cooling.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_cooling.setObjectName("btn_cooling")
         self.btn_case = QtWidgets.QPushButton(self.widget)
         self.btn_case.setGeometry(QtCore.QRect(30, 540, 240, 65))
-        self.btn_case.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_case.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_case.setObjectName("btn_case")
         self.btn_help = QtWidgets.QPushButton(self.widget)
         self.btn_help.setGeometry(QtCore.QRect(100, 720, 93, 28))
+        self.btn_help.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    text-align: center;\n"
+"    display: inline-block;\n"
+"    font-size: 10px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_help.setObjectName("btn_help")
         self.btn_storage_device = QtWidgets.QPushButton(self.widget)
         self.btn_storage_device.setGeometry(QtCore.QRect(30, 620, 240, 65))
-        self.btn_storage_device.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_storage_device.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_storage_device.setObjectName("btn_storage_device")
         self.widget_2 = QtWidgets.QWidget(self.frame)
-        self.widget_2.setGeometry(QtCore.QRect(1490, 10, 400, 970))
+        self.widget_2.setGeometry(QtCore.QRect(1439, 10, 451, 970))
         self.widget_2.setStyleSheet("background-color:  #2D2727;\n"
 "border-radius: 10px;")
         self.widget_2.setObjectName("widget_2")
         self.scrollArea_2 = QtWidgets.QScrollArea(self.widget_2)
-        self.scrollArea_2.setGeometry(QtCore.QRect(20, 290, 361, 651))
+        self.scrollArea_2.setGeometry(QtCore.QRect(20, 290, 411, 651))
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 361, 651))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 411, 651))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -99,7 +270,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName("label_3")
         self.layout_2.addWidget(self.label_3)
         self.layout_CPU = QtWidgets.QVBoxLayout()
-        self.layout_CPU.setContentsMargins(30, 30, -1, -1)
+        self.layout_CPU.setContentsMargins(0, 30, -1, -1)
         self.layout_CPU.setObjectName("layout_CPU")
         self.layout_2.addLayout(self.layout_CPU)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -173,25 +344,62 @@ class Ui_MainWindow(object):
         self.label.setGeometry(QtCore.QRect(20, 100, 81, 31))
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton.setGeometry(QtCore.QRect(50, 180, 305, 50))
-        self.pushButton.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.pushButton.setGeometry(QtCore.QRect(90, 170, 305, 55))
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.pushButton.setObjectName("pushButton")
         self.label_2 = QtWidgets.QLabel(self.widget_2)
-        self.label_2.setGeometry(QtCore.QRect(20, 256, 161, 20))
+        self.label_2.setGeometry(QtCore.QRect(20, 240, 161, 31))
         self.label_2.setObjectName("label_2")
         self.btn_clear = QtWidgets.QPushButton(self.widget_2)
-        self.btn_clear.setGeometry(QtCore.QRect(280, 250, 93, 28))
-        self.btn_clear.setStyleSheet("background-color: #E42A2A;\n"
-"border-radius: 10px;")
+        self.btn_clear.setGeometry(QtCore.QRect(340, 240, 93, 28))
+        self.btn_clear.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 10px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
         self.btn_clear.setObjectName("btn_clear")
         self.widget_3 = QtWidgets.QWidget(self.frame)
-        self.widget_3.setGeometry(QtCore.QRect(430, 10, 1000, 250))
+        self.widget_3.setGeometry(QtCore.QRect(400, 10, 1000, 250))
         self.widget_3.setStyleSheet("background-color:  #2D2727;\n"
 "border-radius: 10px;")
         self.widget_3.setObjectName("widget_3")
         self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(429, 289, 1000, 700))
+        self.frame_2.setGeometry(QtCore.QRect(400, 289, 1000, 700))
         self.frame_2.setStyleSheet("background-color:  #2D2727;\n"
 "border-radius: 10px;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -252,7 +460,7 @@ class Ui_MainWindow(object):
         self.btn_power_unit.setText(_translate("MainWindow", "Блок питания"))
         self.btn_cooling.setText(_translate("MainWindow", "Охлаждение"))
         self.btn_case.setText(_translate("MainWindow", "Корпус"))
-        self.btn_help.setText(_translate("MainWindow", "Помощь!"))
+        self.btn_help.setText(_translate("MainWindow", "Справка"))
         self.btn_storage_device.setText(_translate("MainWindow", "Накопители"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Процессор:</span></p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Видеокарта:</span></p></body></html>"))
@@ -262,7 +470,7 @@ class Ui_MainWindow(object):
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Охлаждение:</span></p></body></html>"))
         self.label_9.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Корпус:</span></p></body></html>"))
         self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Накопители:</span></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "Цена:"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Цена:</span></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Сформировать"))
-        self.label_2.setText(_translate("MainWindow", "Конфигурация:"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Конфигурация:</span></p></body></html>"))
         self.btn_clear.setText(_translate("MainWindow", "Очистить"))
