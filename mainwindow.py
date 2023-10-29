@@ -464,7 +464,7 @@ class Ui_MainWindow(object):
 " }")
         self.btn_exit.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("images/izobrazhenie-PhotoRoom_png-PhotoRoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_exit.setIcon(icon)
         self.btn_exit.setIconSize(QtCore.QSize(200, 250))
         self.btn_exit.setObjectName("btn_exit")

@@ -888,7 +888,7 @@ QPushButton:hover {
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</normaloff>../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</iconset>
+         <normaloff>images/izobrazhenie-PhotoRoom_png-PhotoRoom.png</normaloff>images/izobrazhenie-PhotoRoom_png-PhotoRoom.png</iconset>
        </property>
        <property name="iconSize">
         <size>
