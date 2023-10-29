@@ -50,7 +50,7 @@ border-radius: 10px;</string>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>60</y>
+          <y>20</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -86,7 +86,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>140</y>
+          <y>100</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -119,10 +119,13 @@ QPushButton:pressed {
         </property>
        </widget>
        <widget class="QPushButton" name="btn_RAM">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>300</y>
+          <y>260</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -161,7 +164,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>220</y>
+          <y>180</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -197,7 +200,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>380</y>
+          <y>340</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -233,7 +236,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>460</y>
+          <y>420</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -269,7 +272,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>540</y>
+          <y>500</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -305,7 +308,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>100</x>
-          <y>720</y>
+          <y>740</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -335,11 +338,14 @@ QPushButton:pressed {
          <string>Справка</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_storage_device">
+       <widget class="QPushButton" name="btn_storage_m2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>620</y>
+          <y>580</y>
           <width>240</width>
           <height>65</height>
          </rect>
@@ -368,16 +374,55 @@ QPushButton:pressed {
 </string>
         </property>
         <property name="text">
-         <string>Накопители</string>
+         <string>M2 Накопители</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_storage_sata">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>660</y>
+          <width>240</width>
+          <height>65</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+QPushButton:hover {
+    background-color: #ef5350;
+}
+
+QPushButton:pressed {
+    background-color: #e53935;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>SATA Накопители</string>
         </property>
        </widget>
       </widget>
       <widget class="QWidget" name="widget_2" native="true">
        <property name="geometry">
         <rect>
-         <x>1439</x>
+         <x>1259</x>
          <y>10</y>
-         <width>451</width>
+         <width>631</width>
          <height>970</height>
         </rect>
        </property>
@@ -390,7 +435,7 @@ border-radius: 10px;</string>
          <rect>
           <x>20</x>
           <y>290</y>
-          <width>411</width>
+          <width>591</width>
           <height>651</height>
          </rect>
         </property>
@@ -402,7 +447,7 @@ border-radius: 10px;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>411</width>
+           <width>591</width>
            <height>651</height>
           </rect>
          </property>
@@ -620,12 +665,12 @@ border-radius: 10px;</string>
             <item>
              <widget class="QLabel" name="label_10">
               <property name="text">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Накопители:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;m2 Накопители:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="layout_storage_device">
+             <layout class="QVBoxLayout" name="layout_storage_m2">
               <property name="topMargin">
                <number>30</number>
               </property>
@@ -633,6 +678,33 @@ border-radius: 10px;</string>
             </item>
             <item>
              <spacer name="verticalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;SATA Накопители:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="layout_storage_SATA">
+              <property name="topMargin">
+               <number>30</number>
+              </property>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_10">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
@@ -665,8 +737,8 @@ border-radius: 10px;</string>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>170</y>
+          <x>180</x>
+          <y>160</y>
           <width>305</width>
           <height>55</height>
          </rect>
@@ -714,7 +786,7 @@ QPushButton:pressed {
        <widget class="QPushButton" name="btn_clear">
         <property name="geometry">
          <rect>
-          <x>340</x>
+          <x>510</x>
           <y>240</y>
           <width>93</width>
           <height>28</height>
@@ -747,27 +819,13 @@ QPushButton:pressed {
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="widget_3" native="true">
-       <property name="geometry">
-        <rect>
-         <x>400</x>
-         <y>10</y>
-         <width>1000</width>
-         <height>250</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:  #2D2727;
-border-radius: 10px;</string>
-       </property>
-      </widget>
       <widget class="QFrame" name="frame_2">
        <property name="geometry">
         <rect>
          <x>400</x>
-         <y>289</y>
-         <width>1000</width>
-         <height>700</height>
+         <y>8</y>
+         <width>800</width>
+         <height>970</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -791,8 +849,8 @@ border-radius: 10px;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>978</width>
-             <height>678</height>
+             <width>782</width>
+             <height>952</height>
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
@@ -830,7 +888,7 @@ QPushButton:hover {
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</normaloff>image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</iconset>
+         <normaloff>../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</normaloff>../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -849,7 +907,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>1920</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -4,12 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc780e1-2732-4991-9f77-7927339ef117" name="Changes" comment="w">
-      <change afterPath="$PROJECT_DIR$/customWidget.py" afterDir="false" />
+    <list default="true" id="afc780e1-2732-4991-9f77-7927339ef117" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/counter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PR.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.ui" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/customWidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/990213.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Intel-Core-i3-10105F-5129622245.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/aorus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/rtx4090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ssd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/бп.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/водяное.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/корпус.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/озу.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item.py" beforeDir="false" afterPath="$PROJECT_DIR$/item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item.ui" beforeDir="false" afterPath="$PROJECT_DIR$/item.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item2.py" beforeDir="false" afterPath="$PROJECT_DIR$/item2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +52,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Pb5ingAoiR124if3CC7Uk8DPc8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +69,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dima/Downloads/parser-main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,8 +82,13 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dima\PycharmProjects\GG" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GG" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,7 +101,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="downloading images" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/downloading images.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GG" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/parser-main/parser-main" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/parser-main/parser-main/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,8 +162,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -122,57 +199,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="xyu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GG" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xyu.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.downloading images" />
+      <item itemvalue="Python.database" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.parser" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.xyu" />
+        <item itemvalue="Python.downloading images" />
         <item itemvalue="Python.parser" />
-        <item itemvalue="Python.1" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.database" />
+        <item itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +265,77 @@
       <workItem from="1684570098748" duration="8208000" />
       <workItem from="1684660713601" duration="10992000" />
       <workItem from="1684747407743" duration="1822000" />
-      <workItem from="1684839118385" duration="2741000" />
+      <workItem from="1684839118385" duration="6731000" />
+      <workItem from="1684863320529" duration="1864000" />
+      <workItem from="1684942809020" duration="1788000" />
+      <workItem from="1685014031958" duration="10234000" />
+      <workItem from="1685100239191" duration="1021000" />
+      <workItem from="1685107788813" duration="1051000" />
+      <workItem from="1685351143375" duration="860000" />
+      <workItem from="1685357988460" duration="5441000" />
+      <workItem from="1685457122689" duration="1508000" />
+      <workItem from="1685474383222" duration="2300000" />
+      <workItem from="1685535508577" duration="1337000" />
+      <workItem from="1685540304666" duration="1783000" />
+      <workItem from="1685611347892" duration="824000" />
+      <workItem from="1685616565584" duration="2445000" />
+      <workItem from="1685619477036" duration="1832000" />
+      <workItem from="1685632411976" duration="719000" />
+      <workItem from="1685647038057" duration="44000" />
+      <workItem from="1685788905477" duration="22867000" />
+      <workItem from="1685866413077" duration="19506000" />
+      <workItem from="1685952577942" duration="5655000" />
+      <workItem from="1686045474568" duration="1970000" />
+      <workItem from="1686300193221" duration="3400000" />
+      <workItem from="1686396664318" duration="1052000" />
+      <workItem from="1686496742731" duration="634000" />
+      <workItem from="1686510268357" duration="1194000" />
+      <workItem from="1686565164201" duration="738000" />
+      <workItem from="1686950448323" duration="240000" />
+      <workItem from="1687181463794" duration="2833000" />
+      <workItem from="1687622911617" duration="8000" />
+      <workItem from="1689616810804" duration="142000" />
+      <workItem from="1692652675242" duration="27000" />
+      <workItem from="1693496340935" duration="304000" />
+      <workItem from="1694100550173" duration="136000" />
+      <workItem from="1694245213105" duration="19000" />
+      <workItem from="1694251608954" duration="1971000" />
+      <workItem from="1694442421651" duration="5000" />
+      <workItem from="1694681927834" duration="12000" />
+      <workItem from="1695474903288" duration="2105000" />
+      <workItem from="1695553460320" duration="19175000" />
+      <workItem from="1695624991765" duration="792000" />
+      <workItem from="1695626536416" duration="24000" />
+      <workItem from="1695626596759" duration="604000" />
+      <workItem from="1695631904290" duration="3882000" />
+      <workItem from="1695799044505" duration="3522000" />
+      <workItem from="1696408805416" duration="29000" />
+      <workItem from="1696410194092" duration="1418000" />
+      <workItem from="1696584521528" duration="1000" />
+      <workItem from="1697101353223" duration="152000" />
+      <workItem from="1697613238155" duration="2798000" />
+      <workItem from="1697824400152" duration="4000" />
+      <workItem from="1697895321832" duration="6409000" />
+      <workItem from="1697993902486" duration="761000" />
+      <workItem from="1697994715305" duration="72000" />
+      <workItem from="1697994840678" duration="725000" />
+      <workItem from="1697995581865" duration="1805000" />
+      <workItem from="1698044313028" duration="1161000" />
+      <workItem from="1698160353203" duration="5213000" />
+      <workItem from="1698184760177" duration="426000" />
+      <workItem from="1698218155546" duration="7827000" />
+      <workItem from="1698310686311" duration="172000" />
+      <workItem from="1698330879448" duration="1798000" />
+      <workItem from="1698400300183" duration="8892000" />
+      <workItem from="1698421585802" duration="8569000" />
+      <workItem from="1698504021507" duration="901000" />
+      <workItem from="1698504933481" duration="13292000" />
+      <workItem from="1698563916682" duration="11920000" />
+      <workItem from="1698585504730" duration="3443000" />
+      <workItem from="1698588958205" duration="3151000" />
+      <workItem from="1698593158436" duration="4992000" />
+      <workItem from="1698600687105" duration="1519000" />
+      <workItem from="1698605341826" duration="3882000" />
     </task>
     <task id="LOCAL-00005" summary="w">
       <created>1683716224149</created>
@@ -276,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684839153429</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="w">
+      <created>1684841952761</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684841952761</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,10 +415,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="w" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GG$downloading_images.coverage" NAME="downloading images Coverage Results" MODIFIED="1698577847930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/GG$xyu.coverage" NAME="xyu Coverage Results" MODIFIED="1684440515985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GG$main.coverage" NAME="main Coverage Results" MODIFIED="1684840889709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GG$database.coverage" NAME="database Coverage Results" MODIFIED="1698221310940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GG$main.coverage" NAME="main Coverage Results" MODIFIED="1698608810296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GG$test.coverage" NAME="test Coverage Results" MODIFIED="1683716580118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GG$1.coverage" NAME="1 Coverage Results" MODIFIED="1683802610357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GG$parser.coverage" NAME="parser Coverage Results" MODIFIED="1684415907395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GG$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1695565122978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/parser-main/parser-main" />
+    <SUITE FILE_PATH="coverage/GG$parser.coverage" NAME="parser Coverage Results" MODIFIED="1698505630352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -33,7 +33,7 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.widget.setObjectName("widget")
         self.btn_CPU = QtWidgets.QPushButton(self.widget)
-        self.btn_CPU.setGeometry(QtCore.QRect(30, 60, 240, 65))
+        self.btn_CPU.setGeometry(QtCore.QRect(30, 20, 240, 65))
         self.btn_CPU.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_CPU.setObjectName("btn_CPU")
         self.btn_GPU = QtWidgets.QPushButton(self.widget)
-        self.btn_GPU.setGeometry(QtCore.QRect(30, 140, 240, 65))
+        self.btn_GPU.setGeometry(QtCore.QRect(30, 100, 240, 65))
         self.btn_GPU.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -81,7 +81,8 @@ class Ui_MainWindow(object):
 "")
         self.btn_GPU.setObjectName("btn_GPU")
         self.btn_RAM = QtWidgets.QPushButton(self.widget)
-        self.btn_RAM.setGeometry(QtCore.QRect(30, 300, 240, 65))
+        self.btn_RAM.setEnabled(False)
+        self.btn_RAM.setGeometry(QtCore.QRect(30, 260, 240, 65))
         self.btn_RAM.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -106,7 +107,7 @@ class Ui_MainWindow(object):
         self.btn_RAM.setObjectName("btn_RAM")
         self.btn_motherboard = QtWidgets.QPushButton(self.widget)
         self.btn_motherboard.setEnabled(False)
-        self.btn_motherboard.setGeometry(QtCore.QRect(30, 220, 240, 65))
+        self.btn_motherboard.setGeometry(QtCore.QRect(30, 180, 240, 65))
         self.btn_motherboard.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -130,7 +131,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_motherboard.setObjectName("btn_motherboard")
         self.btn_power_unit = QtWidgets.QPushButton(self.widget)
-        self.btn_power_unit.setGeometry(QtCore.QRect(30, 380, 240, 65))
+        self.btn_power_unit.setGeometry(QtCore.QRect(30, 340, 240, 65))
         self.btn_power_unit.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -154,7 +155,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_power_unit.setObjectName("btn_power_unit")
         self.btn_cooling = QtWidgets.QPushButton(self.widget)
-        self.btn_cooling.setGeometry(QtCore.QRect(30, 460, 240, 65))
+        self.btn_cooling.setGeometry(QtCore.QRect(30, 420, 240, 65))
         self.btn_cooling.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -178,7 +179,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_cooling.setObjectName("btn_cooling")
         self.btn_case = QtWidgets.QPushButton(self.widget)
-        self.btn_case.setGeometry(QtCore.QRect(30, 540, 240, 65))
+        self.btn_case.setGeometry(QtCore.QRect(30, 500, 240, 65))
         self.btn_case.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -202,7 +203,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_case.setObjectName("btn_case")
         self.btn_help = QtWidgets.QPushButton(self.widget)
-        self.btn_help.setGeometry(QtCore.QRect(100, 720, 93, 28))
+        self.btn_help.setGeometry(QtCore.QRect(100, 740, 93, 28))
         self.btn_help.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -223,9 +224,10 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_help.setObjectName("btn_help")
-        self.btn_storage_device = QtWidgets.QPushButton(self.widget)
-        self.btn_storage_device.setGeometry(QtCore.QRect(30, 620, 240, 65))
-        self.btn_storage_device.setStyleSheet("QPushButton {\n"
+        self.btn_storage_m2 = QtWidgets.QPushButton(self.widget)
+        self.btn_storage_m2.setEnabled(False)
+        self.btn_storage_m2.setGeometry(QtCore.QRect(30, 580, 240, 65))
+        self.btn_storage_m2.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
 "    color: white;\n"
@@ -246,18 +248,43 @@ class Ui_MainWindow(object):
 "    background-color: #e53935;\n"
 "}\n"
 "")
-        self.btn_storage_device.setObjectName("btn_storage_device")
+        self.btn_storage_m2.setObjectName("btn_storage_m2")
+        self.btn_storage_sata = QtWidgets.QPushButton(self.widget)
+        self.btn_storage_sata.setEnabled(False)
+        self.btn_storage_sata.setGeometry(QtCore.QRect(30, 660, 240, 65))
+        self.btn_storage_sata.setStyleSheet("QPushButton {\n"
+"    background-color: #f44336;\n"
+"    border: none;\n"
+"    color: white;\n"
+"    padding: 15px 32px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 16px;\n"
+"    margin: 4px 2px;\n"
+"    cursor: pointer;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ef5350;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #e53935;\n"
+"}\n"
+"")
+        self.btn_storage_sata.setObjectName("btn_storage_sata")
         self.widget_2 = QtWidgets.QWidget(self.frame)
-        self.widget_2.setGeometry(QtCore.QRect(1439, 10, 451, 970))
+        self.widget_2.setGeometry(QtCore.QRect(1259, 10, 631, 970))
         self.widget_2.setStyleSheet("background-color:  #2D2727;\n"
 "border-radius: 10px;")
         self.widget_2.setObjectName("widget_2")
         self.scrollArea_2 = QtWidgets.QScrollArea(self.widget_2)
-        self.scrollArea_2.setGeometry(QtCore.QRect(20, 290, 411, 651))
+        self.scrollArea_2.setGeometry(QtCore.QRect(20, 290, 591, 651))
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 411, 651))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 591, 651))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -332,19 +359,28 @@ class Ui_MainWindow(object):
         self.label_10 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
         self.label_10.setObjectName("label_10")
         self.layout_2.addWidget(self.label_10)
-        self.layout_storage_device = QtWidgets.QVBoxLayout()
-        self.layout_storage_device.setContentsMargins(-1, 30, -1, -1)
-        self.layout_storage_device.setObjectName("layout_storage_device")
-        self.layout_2.addLayout(self.layout_storage_device)
+        self.layout_storage_m2 = QtWidgets.QVBoxLayout()
+        self.layout_storage_m2.setContentsMargins(-1, 30, -1, -1)
+        self.layout_storage_m2.setObjectName("layout_storage_m2")
+        self.layout_2.addLayout(self.layout_storage_m2)
         spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.layout_2.addItem(spacerItem8)
+        self.label_11 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
+        self.label_11.setObjectName("label_11")
+        self.layout_2.addWidget(self.label_11)
+        self.layout_storage_SATA = QtWidgets.QVBoxLayout()
+        self.layout_storage_SATA.setContentsMargins(-1, 30, -1, -1)
+        self.layout_storage_SATA.setObjectName("layout_storage_SATA")
+        self.layout_2.addLayout(self.layout_storage_SATA)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.layout_2.addItem(spacerItem9)
         self.gridLayout_4.addLayout(self.layout_2, 0, 0, 1, 1)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.label = QtWidgets.QLabel(self.widget_2)
         self.label.setGeometry(QtCore.QRect(20, 100, 81, 31))
         self.label.setObjectName("label")
         self.pushButton = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton.setGeometry(QtCore.QRect(90, 170, 305, 55))
+        self.pushButton.setGeometry(QtCore.QRect(180, 160, 305, 55))
         self.pushButton.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -371,7 +407,7 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(20, 240, 161, 31))
         self.label_2.setObjectName("label_2")
         self.btn_clear = QtWidgets.QPushButton(self.widget_2)
-        self.btn_clear.setGeometry(QtCore.QRect(340, 240, 93, 28))
+        self.btn_clear.setGeometry(QtCore.QRect(510, 240, 93, 28))
         self.btn_clear.setStyleSheet("QPushButton {\n"
 "    background-color: #f44336;\n"
 "    border: none;\n"
@@ -393,13 +429,8 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_clear.setObjectName("btn_clear")
-        self.widget_3 = QtWidgets.QWidget(self.frame)
-        self.widget_3.setGeometry(QtCore.QRect(400, 10, 1000, 250))
-        self.widget_3.setStyleSheet("background-color:  #2D2727;\n"
-"border-radius: 10px;")
-        self.widget_3.setObjectName("widget_3")
         self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(400, 289, 1000, 700))
+        self.frame_2.setGeometry(QtCore.QRect(400, 8, 800, 970))
         self.frame_2.setStyleSheet("background-color:  #2D2727;\n"
 "border-radius: 10px;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -411,7 +442,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 978, 678))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 782, 952))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_3.setObjectName("gridLayout_3")
@@ -433,14 +464,14 @@ class Ui_MainWindow(object):
 " }")
         self.btn_exit.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("image/izobrazhenie-PhotoRoom_png-PhotoRoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("../../.designer/backup/image/izobrazhenie-PhotoRoom_png-PhotoRoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_exit.setIcon(icon)
         self.btn_exit.setIconSize(QtCore.QSize(200, 250))
         self.btn_exit.setObjectName("btn_exit")
         self.gridLayout_2.addWidget(self.frame, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1920, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -461,7 +492,8 @@ class Ui_MainWindow(object):
         self.btn_cooling.setText(_translate("MainWindow", "Охлаждение"))
         self.btn_case.setText(_translate("MainWindow", "Корпус"))
         self.btn_help.setText(_translate("MainWindow", "Справка"))
-        self.btn_storage_device.setText(_translate("MainWindow", "Накопители"))
+        self.btn_storage_m2.setText(_translate("MainWindow", "M2 Накопители"))
+        self.btn_storage_sata.setText(_translate("MainWindow", "SATA Накопители"))
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Процессор:</span></p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Видеокарта:</span></p></body></html>"))
         self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Материнская плата:</span></p></body></html>"))
@@ -469,7 +501,8 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Блок питания:</span></p></body></html>"))
         self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Охлаждение:</span></p></body></html>"))
         self.label_9.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Корпус:</span></p></body></html>"))
-        self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Накопители:</span></p></body></html>"))
+        self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">m2 Накопители:</span></p></body></html>"))
+        self.label_11.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">SATA Накопители:</span></p></body></html>"))
         self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Цена:</span></p></body></html>"))
         self.pushButton.setText(_translate("MainWindow", "Сформировать"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Конфигурация:</span></p></body></html>"))

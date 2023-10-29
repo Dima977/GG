@@ -16,9 +16,9 @@ class Ui_CustomWidget(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.verticalLayout.setAlignment(QtCore.Qt.AlignCenter)
 
-        self.groupBox = QtWidgets.QGroupBox(CustomWidget)
-        self.groupBox.setMinimumSize(QtCore.QSize(280, 200))
-        self.groupBox.setStyleSheet("""
+        self.widget = QtWidgets.QGroupBox(CustomWidget)
+        self.widget.setMinimumSize(QtCore.QSize(280, 200))
+        self.widget.setStyleSheet("""
             QGroupBox {
                 background-color: transparent;
                 border: none;
@@ -40,19 +40,19 @@ class Ui_CustomWidget(object):
                 border: 2px solid #0064B0;
             }
         """)
-        self.groupBox.setObjectName("groupBox")
+        self.widget.setObjectName("groupBox")
 
-        self.gridLayout = QtWidgets.QGridLayout(self.groupBox)
+        self.gridLayout = QtWidgets.QGridLayout(self.widget)
         self.gridLayout.setObjectName("gridLayout")
         self.gridLayout.setAlignment(QtCore.Qt.AlignCenter)  # Выравнивание по центру
 
-        self.square_label = QtWidgets.QLabel(self.groupBox)
-        self.square_label.setMinimumSize(QtCore.QSize(50, 50))
-        self.square_label.setMaximumSize(QtCore.QSize(50, 50))
-        self.square_label.setObjectName("square_label")
-        self.gridLayout.addWidget(self.square_label, 0, 0, 1, 1)
+        self.label = QtWidgets.QLabel(self.widget)
+        self.label.setMinimumSize(QtCore.QSize(50, 50))
+        self.label.setMaximumSize(QtCore.QSize(50, 50))
+        self.label.setObjectName("square_label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.label_2 = QtWidgets.QLabel(self.groupBox)
+        self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setMinimumSize(QtCore.QSize(300, 30))
 
         font = QtGui.QFont()
@@ -69,7 +69,7 @@ class Ui_CustomWidget(object):
 
         self.gridLayout.addItem(spacer_item, 0, 2, 1, 1)
 
-        self.btn_link = QtWidgets.QPushButton(self.groupBox)
+        self.btn_link = QtWidgets.QPushButton(self.widget)
         self.label_2.setStyleSheet("color: white;")
         self.btn_link.setMinimumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
@@ -81,7 +81,7 @@ class Ui_CustomWidget(object):
         self.btn_link.setObjectName("btn_link")
         self.gridLayout.addWidget(self.btn_link, 0, 3, 1, 1)
 
-        self.verticalLayout.addWidget(self.groupBox)
+        self.verticalLayout.addWidget(self.widget)
 
         self.retranslateUi(CustomWidget)
         QtCore.QMetaObject.connectSlotsByName(CustomWidget)
