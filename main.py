@@ -4,14 +4,13 @@ from PyQt5.QtGui import QPixmap
 from mainwindow import Ui_MainWindow
 from item import Ui_item
 from item2 import Ui_item2
-from configuration import Ui_configuration
 from customWidget import Ui_CustomWidget
 import sqlite3
 import datetime
 import sys
 from sites_parsers import parser_hardprice, parser_n_katalog
 import create_pdf
-from Spravkad import ComputerComponentsWindow
+from help import Ui_Spravka
 
 configuration = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 prices = ['', '', '', '', '', '', '', '', '']
@@ -58,7 +57,7 @@ def shopsListToDBString(shops):
 class Spravka(QMainWindow):
     def __init__(self):
         super(Spravka, self).__init__()
-        self.ui = Ui_configuration()
+        self.ui = Ui_Spravka()
         self.ui.setupUi(self)
 
 
@@ -73,14 +72,6 @@ class CustomWidget(QWidget):
         self.image = QPixmap(image)
         self.ui.label.setPixmap(self.image)
         self.ui.label_2.setText(name)
-
-
-class ConfigWidget(QWidget):
-
-    def __init__(self):
-        super(ConfigWidget, self).__init__()
-        self.ui = Ui_configuration()
-        self.ui.setupUi(self)
 
 
 class ItemWidget(QWidget):
@@ -128,10 +119,6 @@ class MainWindow(QMainWindow):
         self.btn()
         self.ui.btn_clear.clicked.connect(self.clear_all)
 
-    def con_show(self):
-        self.w = ConfigWidget()
-        self.w.show()
-
     def btn(self):
         self.ui.btn_help.clicked.connect(lambda: self.spravkashow())
 
@@ -165,7 +152,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_storage_sata.clicked.connect(lambda: self.widget_storage_sata())
 
     def spravkashow(self):
-        self.spravka = ConfigWidget()
+        self.spravka = Spravka()
         self.spravka.show()
 
     def start(self, name):  # start button
