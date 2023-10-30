@@ -818,6 +818,23 @@ QPushButton:pressed {
          <string>Очистить</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_price">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>95</y>
+          <width>311</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QFrame" name="frame_2">
        <property name="geometry">

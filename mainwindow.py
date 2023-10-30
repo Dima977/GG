@@ -429,6 +429,11 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_clear.setObjectName("btn_clear")
+        self.label_price = QtWidgets.QLabel(self.widget_2)
+        self.label_price.setGeometry(QtCore.QRect(80, 95, 311, 41))
+        self.label_price.setStyleSheet("color: white;\n"
+"")
+        self.label_price.setObjectName("label_price")
         self.frame_2 = QtWidgets.QFrame(self.frame)
         self.frame_2.setGeometry(QtCore.QRect(400, 8, 800, 970))
         self.frame_2.setStyleSheet("background-color:  #2D2727;\n"
@@ -507,3 +512,4 @@ class Ui_MainWindow(object):
         self.pushButton.setText(_translate("MainWindow", "Сформировать"))
         self.label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Конфигурация:</span></p></body></html>"))
         self.btn_clear.setText(_translate("MainWindow", "Очистить"))
+        self.label_price.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">0</span></p></body></html>"))
